@@ -6,7 +6,9 @@ import * as THREE from "three";
 function Particles() {
   const ref = useRef<THREE.Points>(null);
   const positions = useMemo(() => {
-    const arr = new Float32Array(1500 * 3);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const count = isMobile ? 600 : 1500;
+    const arr = new Float32Array(count * 3);
     for (let i = 0; i < arr.length; i++) arr[i] = (Math.random() - 0.5) * 12;
     return arr;
   }, []);
@@ -62,7 +64,7 @@ export function ThreeScene() {
 
 export function InteractiveModel() {
   return (
-    <div className="h-[400px] w-full">
+    <div className="h-[260px] w-full sm:h-[340px] md:h-[400px] 2xl:h-[520px]">
       <Canvas camera={{ position: [0, 0, 4], fov: 55 }} dpr={[1, 2]}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />

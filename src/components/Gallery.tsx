@@ -20,36 +20,37 @@ export function Gallery() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="relative px-6 py-24 md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section id="gallery" className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[100rem]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-12 text-center"
+          className="mb-8 text-center sm:mb-12"
         >
-          <span className="inline-block rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wider text-gold-soft">
+          <span className="inline-block rounded-full glass px-4 py-1.5 text-[11px] font-medium tracking-wider text-gold-soft sm:text-xs">
             GALERIA
           </span>
-          <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
+          <h2 className="mt-4 font-display font-bold text-[clamp(1.75rem,4vw,3.25rem)]">
             Momentos da <span className="text-gradient-gold">turma</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
             Espaços, equipamentos e vivências que formam a nossa jornada em Terapia Ocupacional.
           </p>
         </motion.div>
 
         <Swiper
           modules={[Autoplay, Navigation]}
-          spaceBetween={20}
-          slidesPerView={1.2}
+          spaceBetween={16}
+          slidesPerView={1.15}
           centeredSlides
           loop
           autoplay={{ delay: 2800, disableOnInteraction: false }}
           breakpoints={{
-            640: { slidesPerView: 2.2 },
-            1024: { slidesPerView: 3.2 },
+            640: { slidesPerView: 2.2, spaceBetween: 20 },
+            1024: { slidesPerView: 3.2, spaceBetween: 24 },
+            1536: { slidesPerView: 4.2, spaceBetween: 28 },
           }}
           className="!overflow-visible"
         >

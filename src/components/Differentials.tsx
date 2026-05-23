@@ -12,24 +12,24 @@ const items = [
 
 export function Differentials() {
   return (
-    <section className="relative px-6 py-24 md:px-12">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[100rem]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-10 text-center sm:mb-16"
         >
-          <span className="inline-block rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wider text-gold-soft">
+          <span className="inline-block rounded-full glass px-4 py-1.5 text-[11px] font-medium tracking-wider text-gold-soft sm:text-xs">
             DIFERENCIAIS
           </span>
-          <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
+          <h2 className="mt-4 font-display font-bold text-[clamp(1.75rem,4vw,3.25rem)]">
             O que nos <span className="text-gradient-gold">move</span>
           </h2>
         </motion.div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
