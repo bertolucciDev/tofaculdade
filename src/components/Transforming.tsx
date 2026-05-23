@@ -9,7 +9,7 @@ const moments = [
 
 export function Transforming() {
   return (
-    <section className="relative px-6 py-24 md:px-12">
+    <section className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[var(--gold)]/5 to-transparent" />
       <div className="mx-auto max-w-5xl">
         <motion.div
@@ -17,12 +17,12 @@ export function Transforming() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-10 text-center sm:mb-16"
         >
-          <span className="inline-block rounded-full glass px-4 py-1.5 text-xs font-medium tracking-wider text-gold-soft">
+          <span className="inline-block rounded-full glass px-4 py-1.5 text-[11px] font-medium tracking-wider text-gold-soft sm:text-xs">
             NOSSA MISSÃO
           </span>
-          <h2 className="mt-4 font-display text-4xl font-bold sm:text-5xl">
+          <h2 className="mt-4 font-display font-bold text-[clamp(1.75rem,4vw,3.25rem)]">
             Transformando <span className="text-gradient-gold">Vidas</span>
           </h2>
         </motion.div>
