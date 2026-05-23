@@ -6,7 +6,9 @@ import * as THREE from "three";
 function Particles() {
   const ref = useRef<THREE.Points>(null);
   const positions = useMemo(() => {
-    const arr = new Float32Array(1500 * 3);
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const count = isMobile ? 600 : 1500;
+    const arr = new Float32Array(count * 3);
     for (let i = 0; i < arr.length; i++) arr[i] = (Math.random() - 0.5) * 12;
     return arr;
   }, []);
