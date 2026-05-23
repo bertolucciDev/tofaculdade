@@ -62,7 +62,7 @@ export function ThreeScene() {
 
 export function InteractiveModel() {
   return (
-    <div className="h-[400px] w-full">
+    <div className="h-[260px] w-full sm:h-[340px] md:h-[400px] 2xl:h-[520px]">
       <Canvas camera={{ position: [0, 0, 4], fov: 55 }} dpr={[1, 2]}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
