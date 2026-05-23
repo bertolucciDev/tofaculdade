@@ -2,15 +2,15 @@ import { Instagram, Facebook, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative px-6 pt-16 pb-10 md:px-12">
+    <footer className="relative px-4 pt-12 pb-8 sm:px-6 sm:pt-16 sm:pb-10 md:px-12">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/40 to-transparent" />
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl glass-strong p-10 text-center glow-gold">
-          <div className="font-display text-3xl font-bold text-gradient-gold sm:text-4xl">
+        <div className="rounded-3xl glass-strong p-6 text-center glow-gold sm:p-10">
+          <div className="font-display font-bold text-gradient-gold text-[clamp(1.5rem,3vw,2.5rem)]">
             Turma II · Terapia Ocupacional
           </div>
-          <div className="mt-2 text-sm tracking-widest text-muted-foreground">ITE — INSTITUIÇÃO TOLEDO DE ENSINO</div>
-          <p className="mx-auto mt-6 max-w-xl text-base italic text-foreground/90">
+          <div className="mt-2 text-[11px] tracking-widest text-muted-foreground sm:text-sm">ITE — INSTITUIÇÃO TOLEDO DE ENSINO</div>
+          <p className="mx-auto mt-6 max-w-xl text-sm italic text-foreground/90 sm:text-base">
             "Mais que um trabalho, a terapia ocupacional é um ato de amor e um compromisso com a vida."
           </p>
           <div className="mt-8 flex items-center justify-center gap-4">
