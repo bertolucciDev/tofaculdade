@@ -18,7 +18,7 @@ export function About() {
           <h2 className="font-display font-bold leading-tight text-[clamp(1.75rem,4vw,3.5rem)]">
             O que é <span className="text-gradient-gold">Terapia Ocupacional?</span>
           </h2>
-          <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
             <p>
               A Terapia Ocupacional é uma profissão da área da saúde dedicada a promover{" "}
               <span className="text-foreground font-medium">autonomia, inclusão e qualidade de vida</span> através de
