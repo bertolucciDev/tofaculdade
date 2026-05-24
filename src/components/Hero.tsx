@@ -27,7 +27,7 @@ export function Hero() {
             <span className="whitespace-nowrap">ARRAIÁ · TURMA II · ITE</span>
           </div>
 
-          <h1 className="font-display font-bold leading-[1.08] text-[clamp(2rem,6vw,5.5rem)]">
+          <h1 className="font-display font-bold leading-[1.1] text-[clamp(1.6rem,7vw,5.5rem)] break-words hyphens-auto">
             Seja bem-vindo(a) ao <span className="text-gradient-gold">arraiá</span> da Turma II de{" "}
             <span className="text-gradient-green">Terapia Ocupacional</span>
             <span className="ml-2 inline-block animate-float">🌽</span>
@@ -38,17 +38,17 @@ export function Hero() {
             através do cuidado humano, da reabilitação e da inclusão.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-3 pt-2 sm:gap-4 lg:justify-start">
+          <div className="flex flex-wrap justify-center gap-2.5 pt-2 sm:gap-4 lg:justify-start">
             <a
               href="#about"
-              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--gold)] to-[var(--gold-soft)] px-5 py-3 text-xs font-semibold text-primary-foreground glow-gold transition-transform hover:scale-105 sm:px-7 sm:py-3.5 sm:text-sm"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--gold)] to-[var(--gold-soft)] px-4 py-2.5 text-[11px] font-semibold text-primary-foreground glow-gold transition-transform hover:scale-105 sm:px-7 sm:py-3.5 sm:text-sm"
             >
               Conhecer o Curso
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1 sm:h-4 sm:w-4" />
             </a>
             <a
               href="#gallery"
-              className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-xs font-semibold text-foreground transition-colors hover:bg-white/10 sm:px-7 sm:py-3.5 sm:text-sm"
+              className="inline-flex items-center gap-2 rounded-full glass px-4 py-2.5 text-[11px] font-semibold text-foreground transition-colors hover:bg-white/10 sm:px-7 sm:py-3.5 sm:text-sm"
             >
               Explorar Atividades
             </a>
