@@ -43,7 +43,7 @@ export function Gallery() {
         <Swiper
           modules={[Autoplay, Navigation]}
           spaceBetween={16}
-          slidesPerView={1.15}
+          slidesPerView={1.05}
           centeredSlides
           loop
           autoplay={{ delay: 2800, disableOnInteraction: false }}
@@ -59,7 +59,7 @@ export function Gallery() {
               <motion.button
                 whileHover={{ scale: 1.03, y: -6 }}
                 onClick={() => setLightbox(src)}
-                className="group relative aspect-[3/4] w-full overflow-hidden rounded-2xl glass p-2 transition-all hover:glow-gold"
+                className="group relative aspect-[16/10] w-full overflow-hidden rounded-2xl glass p-2 transition-all hover:glow-gold sm:aspect-[3/4]"
               >
                 <img
                   src={src}

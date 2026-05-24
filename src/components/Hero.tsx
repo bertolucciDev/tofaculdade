@@ -90,7 +90,7 @@ export function Hero() {
             >
               {heroImgs.map((src, i) => (
                 <SwiperSlide key={i}>
-                  <div className="aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                  <div className="aspect-[3/2] overflow-hidden rounded-[1.5rem] sm:aspect-[4/5]">
                     <img src={src} alt={`Atividade da turma ${i + 1}`} className="h-full w-full object-cover" loading="eager" />
                   </div>
                 </SwiperSlide>
