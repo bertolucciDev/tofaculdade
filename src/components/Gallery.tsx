@@ -20,8 +20,8 @@ export function Gallery() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
-      <div className="mx-auto max-w-7xl 2xl:max-w-[100rem]">
+    <section id="gallery" className="relative max-w-full overflow-hidden px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+      <div className="mx-auto w-full max-w-7xl min-w-0 2xl:max-w-[100rem]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,17 +42,17 @@ export function Gallery() {
 
         <Swiper
           modules={[Autoplay, Navigation]}
-          spaceBetween={16}
-          slidesPerView={1.05}
-          centeredSlides
+          spaceBetween={12}
+          slidesPerView={1}
+          centeredSlides={false}
           loop
           autoplay={{ delay: 2800, disableOnInteraction: false }}
           breakpoints={{
-            640: { slidesPerView: 2.2, spaceBetween: 20 },
+            640: { slidesPerView: 2.2, spaceBetween: 20, centeredSlides: true },
             1024: { slidesPerView: 3.2, spaceBetween: 24 },
             1536: { slidesPerView: 4.2, spaceBetween: 28 },
           }}
-          className="!overflow-visible"
+          className="w-full max-w-full !overflow-hidden sm:!overflow-visible"
         >
           {photos.map((src, i) => (
             <SwiperSlide key={i}>
