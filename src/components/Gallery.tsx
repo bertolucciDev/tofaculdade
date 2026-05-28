@@ -13,10 +13,10 @@ import g5 from "@/assets/gallery-5.jpeg";
 import g6 from "@/assets/gallery-6.jpeg";
 import g7 from "@/assets/gallery-7.jpeg";
 import g8 from "@/assets/gallery-8.jpeg";
-import g9 from "@/assets/gallery-9.jpeg";
-import g10 from "@/assets/gallery-10.jpeg";
-import g11 from "@/assets/gallery-11.jpeg";
-import g12 from "@/assets/gallery-12.jpeg";
+import g9 from "@/assets/Gallery-9.jpeg";
+import g10 from "@/assets/Gallery-10.jpeg";
+import g11 from "@/assets/Gallery-11.jpeg";
+import g12 from "@/assets/Gallery-12.jpeg";
 
 const photos = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11, g12];
 
