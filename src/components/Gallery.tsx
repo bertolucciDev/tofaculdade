@@ -24,7 +24,10 @@ export function Gallery() {
   const [lightbox, setLightbox] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="relative max-w-full overflow-hidden px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+    <section
+      id="gallery"
+      className="relative max-w-full overflow-hidden px-4 py-16 sm:px-6 sm:py-24 md:px-12"
+    >
       <div className="mx-auto w-full max-w-7xl min-w-0 2xl:max-w-[100rem]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
