@@ -1,56 +1,122 @@
 import { motion } from "framer-motion";
-import { Hospital, Brain, Activity, GraduationCap, Home, Briefcase, HeartHandshake } from "lucide-react";
+import {
+  Hospital,
+  Brain,
+  Activity,
+  GraduationCap,
+  Home,
+  Briefcase,
+  HeartHandshake,
+  Baby,
+} from "lucide-react";
 
 const areas = [
-  { icon: Hospital, title: "Hospitais", desc: "Reabilitação e cuidado em ambiente hospitalar." },
-  { icon: Brain, title: "Saúde Mental", desc: "Suporte psicossocial e autonomia emocional." },
-  { icon: Activity, title: "Reabilitação Física", desc: "Recuperação funcional e movimento." },
-  { icon: GraduationCap, title: "Escolas", desc: "Inclusão escolar e desenvolvimento infantil." },
-  { icon: Home, title: "Atendimento Domiciliar", desc: "Cuidado personalizado em casa." },
-  { icon: Briefcase, title: "Empresas", desc: "Ergonomia e saúde ocupacional." },
-  { icon: HeartHandshake, title: "Instituições Sociais", desc: "Promoção de direitos humanos." },
+  {
+    icon: Hospital,
+    title: "Hospitais",
+    desc: "Reabilitação e cuidado interdisciplinar em ambiente hospitalar.",
+    span: "lg:col-span-3 lg:row-span-2",
+    accent: "bright",
+  },
+  {
+    icon: Brain,
+    title: "Saúde Mental",
+    desc: "Suporte psicossocial, escuta ativa e reconstrução de rotinas.",
+    span: "lg:col-span-3",
+  },
+  {
+    icon: Activity,
+    title: "Reabilitação Física",
+    desc: "Recuperação funcional, movimento e independência.",
+    span: "lg:col-span-3",
+  },
+  {
+    icon: GraduationCap,
+    title: "Contexto Escolar",
+    desc: "Inclusão e desenvolvimento infantil em espaços educativos.",
+    span: "lg:col-span-2",
+  },
+  {
+    icon: Home,
+    title: "Atendimento Domiciliar",
+    desc: "Cuidado personalizado no ambiente de vida da pessoa.",
+    span: "lg:col-span-2",
+  },
+  {
+    icon: Baby,
+    title: "Pediatria",
+    desc: "Estimulação, brincar terapêutico e neurodesenvolvimento.",
+    span: "lg:col-span-2",
+  },
+  {
+    icon: Briefcase,
+    title: "Saúde do Trabalhador",
+    desc: "Ergonomia, prevenção e qualidade de vida ocupacional.",
+    span: "lg:col-span-3",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Instituições Sociais",
+    desc: "Direitos humanos, inclusão e promoção de cidadania.",
+    span: "lg:col-span-3",
+  },
 ];
 
 export function Areas() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
+    <section id="areas" className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
       <div className="mx-auto max-w-7xl 2xl:max-w-[100rem]">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-10 text-center sm:mb-16"
+          className="mb-10 max-w-2xl sm:mb-14"
         >
-          <span className="inline-block rounded-full glass px-4 py-1.5 text-[11px] font-medium tracking-wider text-gold-soft sm:text-xs">
-            ÁREAS DE ATUAÇÃO
-          </span>
-          <h2 className="mt-4 font-display font-bold text-[clamp(1.75rem,4vw,3.25rem)]">
-            Onde a <span className="text-gradient-gold">TO</span> transforma vidas
+          <div className="inline-flex items-center gap-2 font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--accent-soft)] sm:text-[11px]">
+            <span className="h-px w-8 bg-[var(--accent-bright)]" />
+            Áreas de atuação
+          </div>
+          <h2 className="mt-4 font-display font-normal text-[clamp(1.9rem,4.4vw,3.5rem)]">
+            Onde a <span className="italic text-gradient-gold">TO</span> transforma o cotidiano
           </h2>
+          <p className="mt-4 font-sans text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Do hospital ao domicílio, da escola à empresa — o terapeuta ocupacional constrói pontes
+            entre a pessoa, suas ocupações e o mundo.
+          </p>
         </motion.div>
 
-        <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid auto-rows-[minmax(150px,auto)] grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-6">
           {areas.map((area, i) => (
-            <motion.div
+            <motion.article
               key={area.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -8, rotateX: 4, rotateY: -4 }}
-              className="group relative overflow-hidden rounded-2xl glass p-6 transition-all hover:border-[var(--gold)]/40 hover:glow-gold"
-              style={{ transformStyle: "preserve-3d" }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.55, delay: i * 0.05 }}
+              className={`group surface-tile relative overflow-hidden rounded-2xl p-6 transition-all hover:-translate-y-1 hover:border-[var(--accent-bright)]/40 hover:shadow-[0_20px_60px_-30px_rgba(92,189,185,0.55)] ${area.span ?? ""}`}
             >
-              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[var(--gold)]/10 blur-2xl transition-all group-hover:bg-[var(--gold)]/25" />
-              <div className="relative space-y-3">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--gold)] to-[var(--gold-soft)] text-primary-foreground glow-gold">
-                  <area.icon className="h-6 w-6" />
+              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[var(--accent-bright)]/10 blur-3xl transition-opacity group-hover:opacity-70" />
+              <div className="relative flex h-full flex-col justify-between gap-4">
+                <div
+                  className={`inline-flex h-11 w-11 items-center justify-center rounded-xl ${
+                    area.accent === "bright"
+                      ? "bg-[var(--accent-bright)]/20 text-[var(--accent-bright)]"
+                      : "bg-[var(--accent-mid)]/25 text-[var(--accent-soft)]"
+                  }`}
+                >
+                  <area.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-xl font-semibold">{area.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{area.desc}</p>
+                <div>
+                  <h3 className="font-display text-2xl font-normal leading-tight sm:text-[1.65rem]">
+                    {area.title}
+                  </h3>
+                  <p className="mt-2 font-sans text-sm leading-relaxed text-muted-foreground">
+                    {area.desc}
+                  </p>
+                </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

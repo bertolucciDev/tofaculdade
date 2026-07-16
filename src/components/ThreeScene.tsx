@@ -21,7 +21,7 @@ function Particles() {
 
   return (
     <Points ref={ref} positions={positions} stride={3} frustumCulled>
-      <PointMaterial transparent color="#D4AF37" size={0.018} sizeAttenuation depthWrite={false} />
+      <PointMaterial transparent color="#5cbdb9" size={0.018} sizeAttenuation depthWrite={false} />
     </Points>
   );
 }
@@ -33,10 +33,10 @@ function FloatingOrb({ position, color, scale = 1 }: { position: [number, number
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color={color}
-          roughness={0.15}
-          metalness={0.85}
+          roughness={0.2}
+          metalness={0.8}
           emissive={color}
-          emissiveIntensity={0.25}
+          emissiveIntensity={0.3}
           wireframe
         />
       </mesh>
@@ -50,12 +50,12 @@ export function ThreeScene() {
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }} dpr={[1, 1.5]}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.4} />
-          <pointLight position={[10, 10, 10]} intensity={1.2} color="#D4AF37" />
-          <pointLight position={[-10, -10, -5]} intensity={0.8} color="#6FCF97" />
+          <pointLight position={[10, 10, 10]} intensity={1.2} color="#5cbdb9" />
+          <pointLight position={[-10, -10, -5]} intensity={0.8} color="#2d8a9e" />
           <Particles />
-          <FloatingOrb position={[-3, 1, -2]} color="#6FCF97" scale={0.9} />
-          <FloatingOrb position={[3, -1, -1]} color="#D4AF37" scale={0.6} />
-          <FloatingOrb position={[0, 2, -3]} color="#3A7D44" scale={1.1} />
+          <FloatingOrb position={[-3, 1, -2]} color="#5cbdb9" scale={0.9} />
+          <FloatingOrb position={[3, -1, -1]} color="#a8dad5" scale={0.6} />
+          <FloatingOrb position={[0, 2, -3]} color="#2d8a9e" scale={1.1} />
         </Suspense>
       </Canvas>
     </div>
@@ -68,24 +68,24 @@ export function InteractiveModel() {
       <Canvas camera={{ position: [0, 0, 4], fov: 55 }} dpr={[1, 2]}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
-          <pointLight position={[5, 5, 5]} intensity={1.5} color="#D4AF37" />
-          <pointLight position={[-5, -3, 2]} intensity={1} color="#6FCF97" />
+          <pointLight position={[5, 5, 5]} intensity={1.5} color="#5cbdb9" />
+          <pointLight position={[-5, -3, 2]} intensity={1} color="#2d8a9e" />
           <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
             <mesh>
               <torusKnotGeometry args={[1, 0.32, 180, 24]} />
-              <meshStandardMaterial color="#3A7D44" roughness={0.2} metalness={0.9} emissive="#1F5E3B" emissiveIntensity={0.4} />
+              <meshStandardMaterial color="#2d8a9e" roughness={0.25} metalness={0.85} emissive="#1a4a6e" emissiveIntensity={0.45} />
             </mesh>
           </Float>
           <Float speed={1.2} rotationIntensity={1} floatIntensity={1.5}>
             <mesh position={[1.6, 1.2, 0]} scale={0.4}>
               <icosahedronGeometry args={[1, 0]} />
-              <meshStandardMaterial color="#D4AF37" metalness={1} roughness={0.1} />
+              <meshStandardMaterial color="#a8dad5" metalness={1} roughness={0.15} />
             </mesh>
           </Float>
           <Float speed={1.6} rotationIntensity={1} floatIntensity={1.8}>
             <mesh position={[-1.6, -1, 0]} scale={0.35}>
               <octahedronGeometry args={[1, 0]} />
-              <meshStandardMaterial color="#6FCF97" metalness={0.8} roughness={0.2} />
+              <meshStandardMaterial color="#5cbdb9" metalness={0.8} roughness={0.2} />
             </mesh>
           </Float>
         </Suspense>
