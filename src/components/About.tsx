@@ -4,45 +4,51 @@ import { InteractiveModel } from "./ThreeScene";
 export function About() {
   return (
     <section id="about" className="relative px-4 py-16 sm:px-6 sm:py-24 md:px-12">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-16 lg:grid-cols-2 2xl:max-w-[100rem]">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 sm:gap-16 lg:grid-cols-12 2xl:max-w-[100rem]">
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="space-y-5 sm:space-y-6"
+          className="space-y-6 lg:col-span-7"
         >
-          <span className="inline-block rounded-full glass px-4 py-1.5 text-[11px] font-medium tracking-wider text-gold-soft sm:text-xs">
-            SOBRE A PROFISSÃO
-          </span>
-          <h2 className="font-display font-bold leading-tight text-[clamp(1.75rem,4vw,3.5rem)]">
-            O que é <span className="text-gradient-gold">Terapia Ocupacional?</span>
+          <div className="inline-flex items-center gap-2 font-sans text-[10px] font-medium uppercase tracking-[0.22em] text-[var(--accent-soft)] sm:text-[11px]">
+            <span className="h-px w-8 bg-[var(--accent-bright)]" />
+            A profissão
+          </div>
+          <h2 className="font-display font-normal leading-[1.05] text-[clamp(1.9rem,4.6vw,3.75rem)]">
+            O que é <span className="italic text-gradient-gold">Terapia Ocupacional?</span>
           </h2>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
+          <div className="space-y-5 font-sans text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
             <p>
-              A Terapia Ocupacional é uma profissão da área da saúde dedicada a promover{" "}
-              <span className="text-foreground font-medium">autonomia, inclusão e qualidade de vida</span> através de
-              atividades significativas — ocupações que dão sentido ao cotidiano de cada pessoa.
+              É uma profissão da saúde dedicada a promover{" "}
+              <span className="font-medium text-foreground">
+                autonomia, inclusão e qualidade de vida
+              </span>{" "}
+              por meio de atividades significativas — ocupações que dão sentido ao cotidiano de
+              cada pessoa.
             </p>
             <p>
-              O terapeuta ocupacional atua com pessoas de todas as idades em processos de reabilitação física,
-              mental, social e cognitiva, combinando ciência, criatividade e profundo respeito humano.
+              O terapeuta ocupacional atua com pessoas de todas as idades em processos de
+              reabilitação física, mental, social e cognitiva, combinando ciência, criatividade e
+              profundo respeito humano.
             </p>
-            <p className="border-l-2 border-[var(--gold)] pl-4 italic text-gold-soft">
-              "Mais que um trabalho, a terapia ocupacional é um ato de amor e um compromisso com a vida."
-            </p>
+            <blockquote className="relative rounded-2xl border-l-2 border-[var(--accent-bright)] bg-[var(--ocean-mid)]/30 py-4 pl-5 pr-4 font-display text-lg italic text-[var(--accent-soft)] sm:text-xl">
+              “Mais que um trabalho, a Terapia Ocupacional é um ato de amor e um compromisso com a
+              vida.”
+            </blockquote>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="relative"
+          className="relative lg:col-span-5"
         >
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[var(--green-neon)]/20 to-[var(--gold)]/20 blur-3xl" />
-          <div className="relative rounded-3xl glass-strong p-4 glow-green">
+          <div className="absolute inset-4 rounded-3xl bg-gradient-to-br from-[var(--accent-bright)]/20 to-[var(--accent-mid)]/25 blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl surface-tile p-4 glow-green">
             <InteractiveModel />
           </div>
         </motion.div>
